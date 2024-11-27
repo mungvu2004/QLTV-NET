@@ -1,0 +1,228 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Form\\QLTV\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|d:\\form\\qltv\\qltv\\modify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\modify.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\borrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|d:\\form\\qltv\\qltv\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\data.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\home.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\detailborrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\detailborrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\detailborrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\detailborrow.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|D:\\Form\\QLTV\\qltv\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{919EFE94-3BC2-46D2-9F3D-A0947B493CCA}|QLTV\\QLTV.csproj|solutionrelative:qltv\\books.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Data.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Data.cs",
+              "RelativeDocumentMoniker": "QLTV\\Data.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Data.cs",
+              "RelativeToolTip": "QLTV\\Data.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAswBUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T08:47:53.207Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Borrow.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Borrow.cs",
+              "RelativeDocumentMoniker": "QLTV\\Borrow.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Borrow.cs",
+              "RelativeToolTip": "QLTV\\Borrow.cs",
+              "ViewState": "AgIAAOsAAAAAAAAAAAArwDgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T07:34:27.592Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Borrow.cs [Design]",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Borrow.cs",
+              "RelativeDocumentMoniker": "QLTV\\Borrow.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Borrow.cs [Design]",
+              "RelativeToolTip": "QLTV\\Borrow.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T12:20:29.316Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Modify.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Modify.cs",
+              "RelativeDocumentMoniker": "QLTV\\Modify.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Modify.cs",
+              "RelativeToolTip": "QLTV\\Modify.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAIwMcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-14T08:52:38.291Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Program.cs",
+              "RelativeDocumentMoniker": "QLTV\\Program.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Program.cs",
+              "RelativeToolTip": "QLTV\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T13:55:54.914Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Home.cs [Design]",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Home.cs",
+              "RelativeDocumentMoniker": "QLTV\\Home.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Home.cs [Design]",
+              "RelativeToolTip": "QLTV\\Home.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T12:38:24.701Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Home.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Home.cs",
+              "RelativeDocumentMoniker": "QLTV\\Home.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Home.cs",
+              "RelativeToolTip": "QLTV\\Home.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAAACwAAAA7AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T10:25:13.632Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Account.cs",
+              "RelativeDocumentMoniker": "QLTV\\Account.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Account.cs",
+              "RelativeToolTip": "QLTV\\Account.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAhwDoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-16T17:42:48.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DetailBorrow.cs [Design]",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\DetailBorrow.cs",
+              "RelativeDocumentMoniker": "QLTV\\DetailBorrow.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\DetailBorrow.cs [Design]",
+              "RelativeToolTip": "QLTV\\DetailBorrow.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:26:09.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "DetailBorrow.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\DetailBorrow.cs",
+              "RelativeDocumentMoniker": "QLTV\\DetailBorrow.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\DetailBorrow.cs",
+              "RelativeToolTip": "QLTV\\DetailBorrow.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAqwBYAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-26T17:42:10.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Books.cs [Design]",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Books.cs",
+              "RelativeDocumentMoniker": "QLTV\\Books.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Books.cs [Design]",
+              "RelativeToolTip": "QLTV\\Books.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T08:43:26.91Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Books.cs",
+              "DocumentMoniker": "D:\\Form\\QLTV\\QLTV\\Books.cs",
+              "RelativeDocumentMoniker": "QLTV\\Books.cs",
+              "ToolTip": "D:\\Form\\QLTV\\QLTV\\Books.cs",
+              "RelativeToolTip": "QLTV\\Books.cs",
+              "ViewState": "AgIAAB4BAAAAAAAAAAASwL4AAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-21T08:43:30.622Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
