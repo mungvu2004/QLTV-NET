@@ -50,6 +50,8 @@
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.btnCT = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -60,6 +62,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.guna2Button5);
+            this.panel1.Controls.Add(this.btnCT);
             this.panel1.Controls.Add(this.guna2Button4);
             this.panel1.Controls.Add(this.guna2Button3);
             this.panel1.Controls.Add(this.guna2Button2);
@@ -118,7 +122,7 @@
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(334, 862);
+            this.guna2Button2.Location = new System.Drawing.Point(42, 957);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 12;
@@ -356,6 +360,36 @@
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             this.dgvBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellContentClick);
             // 
+            // btnCT
+            // 
+            this.btnCT.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnCT.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnCT.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnCT.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnCT.ForeColor = System.Drawing.Color.White;
+            this.btnCT.Location = new System.Drawing.Point(331, 862);
+            this.btnCT.Name = "btnCT";
+            this.btnCT.Size = new System.Drawing.Size(180, 45);
+            this.btnCT.TabIndex = 16;
+            this.btnCT.Text = "CHI TIẾT";
+            this.btnCT.Click += new System.EventHandler(this.btnCT_Click);
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button5.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.Location = new System.Drawing.Point(331, 956);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button5.TabIndex = 17;
+            this.guna2Button5.Text = "CLEAR";
+            this.guna2Button5.Click += new System.EventHandler(this.guna2Button5_Click);
+            // 
             // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -404,5 +438,7 @@
         private System.Windows.Forms.DataGridView dgvBooks;
         private Guna.UI2.WinForms.Guna2Button guna2Button4;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnCT;
+        private Guna.UI2.WinForms.Guna2Button guna2Button5;
     }
 }

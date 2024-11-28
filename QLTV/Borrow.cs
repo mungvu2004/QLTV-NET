@@ -316,7 +316,6 @@ namespace QLTV
             DataTable dt = modify.DetailBorrow(id);
             DetailBorrow detailBorrow = new DetailBorrow(id, dt);
             detailBorrow.Show();
-            
         }
     }
 }

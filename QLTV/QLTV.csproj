@@ -115,6 +115,12 @@
       <DependentUpon>Borrow.cs</DependentUpon>
     </Compile>
     <Compile Include="Data.cs" />
+    <Compile Include="Detailbook.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Detailbook.Designer.cs">
+      <DependentUpon>Detailbook.cs</DependentUpon>
+    </Compile>
     <Compile Include="DetailBorrow.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,6 +163,9 @@
     <EmbeddedResource Include="Borrow.resx">
       <DependentUpon>Borrow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Detailbook.resx">
+      <DependentUpon>Detailbook.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DetailBorrow.resx">
       <DependentUpon>DetailBorrow.cs</DependentUpon>
     </EmbeddedResource>
@@ -174,6 +183,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
@@ -194,6 +204,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stack-of-books.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\working.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrow1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\analytics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sv_logo_dashboard.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -327,5 +327,38 @@ namespace QLTV
         {
 
         }
+
+        private void btnCT_Click(object sender, EventArgs e)
+        {
+            if(dgvBooks.CurrentRow != null)
+            {
+                DataGridViewRow row = dgvBooks.CurrentRow;
+                int bookId = int.Parse(row.Cells["BookID"].Value.ToString());
+
+                DataTable dt = modify.Detailbook(bookId);
+                if(dt != null)
+                {
+                    Detailbook db = new Detailbook(bookId,dt);
+                    db.Show();
+                }
+                else
+                {
+                    MessageBox.Show("Khong co thong tin ", "loi", MessageBoxButtons.OK);
+                    return;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Vui long chon sach ","Thong bao",MessageBoxButtons.OK); return;
+            }
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+            cbCategrory.Text = string.Empty;
+            txtAuthor.Text = string.Empty;
+            txtBookName.Text = string.Empty;
+            txtQuantity.Text = string.Empty;
+        }
     }
 }

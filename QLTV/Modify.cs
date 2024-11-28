@@ -793,5 +793,36 @@ namespace QLTV
                 }
             }
         }
+
+        //-------------------------------------------------------
+
+        public DataTable Detailbook(int bookID)
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(sql))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "select b.Title, b.Author, bd.Detail from BookDetails bd inner join Books b ON bd.BookID = b.BookID where bd.BookID = @BookID";
+                    using(SqlCommand cmd = new SqlCommand(query,connection))
+                    {
+                        cmd.Parameters.AddWithValue("@BookID", bookID);
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                        return dataTable;
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return new DataTable();
+                }
+            }
+        }
+
     }
 }

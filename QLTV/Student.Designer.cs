@@ -163,7 +163,7 @@
             this.label3.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.label3.Size = new System.Drawing.Size(156, 50);
             this.label3.TabIndex = 1;
-            this.label3.Text = "Address";
+            this.label3.Text = "Địa chỉ";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label4
@@ -174,7 +174,7 @@
             this.label4.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.label4.Size = new System.Drawing.Size(156, 50);
             this.label4.TabIndex = 2;
-            this.label4.Text = "Name";
+            this.label4.Text = "Tên";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label5
@@ -185,7 +185,7 @@
             this.label5.Padding = new System.Windows.Forms.Padding(50, 0, 0, 0);
             this.label5.Size = new System.Drawing.Size(156, 50);
             this.label5.TabIndex = 3;
-            this.label5.Text = "Phone";
+            this.label5.Text = "SĐT";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtID

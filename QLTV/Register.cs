@@ -61,7 +61,7 @@ namespace QLTV
             else if(modify.CheckEmail(email, out ex))
             {
                 MessageBox.Show(
-                    ex,
+                    "Email của bạn đã tồn tại!!!",
                     "Cảnh báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
@@ -82,7 +82,7 @@ namespace QLTV
                 else
                 {
                     MessageBox.Show(
-                    ex,
+                    $"Bạn đang bị lỗi: {ex}",
                     "Cảnh báo",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Warning);
