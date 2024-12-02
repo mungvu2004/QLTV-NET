@@ -30,23 +30,23 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Account));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.dgvAccount = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
             this.rbtnUser = new System.Windows.Forms.RadioButton();
+            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
+            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.dgvAccount = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,40 +59,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1819, 247);
             this.panel1.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.dgvAccount);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 247);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1819, 891);
-            this.panel2.TabIndex = 1;
-            // 
-            // dgvAccount
-            // 
-            this.dgvAccount.BackgroundColor = System.Drawing.Color.White;
-            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvAccount.Location = new System.Drawing.Point(0, 0);
-            this.dgvAccount.Name = "dgvAccount";
-            this.dgvAccount.RowHeadersWidth = 82;
-            this.dgvAccount.RowTemplate.Height = 33;
-            this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAccount.Size = new System.Drawing.Size(1819, 891);
-            this.dgvAccount.TabIndex = 0;
-            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.groupBox1);
-            this.panel3.Controls.Add(this.guna2Button2);
-            this.panel3.Controls.Add(this.guna2Button1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1475, 247);
-            this.panel3.TabIndex = 0;
             // 
             // panel4
             // 
@@ -114,20 +80,50 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // guna2Button1
+            // panel3
             // 
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(100, 89);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 0;
-            this.guna2Button1.Text = "XÓA";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.panel3.Controls.Add(this.groupBox1);
+            this.panel3.Controls.Add(this.guna2Button2);
+            this.panel3.Controls.Add(this.guna2Button1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1475, 247);
+            this.panel3.TabIndex = 0;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rbtnUser);
+            this.groupBox1.Controls.Add(this.rbtnAdmin);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(900, 38);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(307, 178);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Quyền truy cập";
+            // 
+            // rbtnUser
+            // 
+            this.rbtnUser.AutoSize = true;
+            this.rbtnUser.Location = new System.Drawing.Point(29, 117);
+            this.rbtnUser.Name = "rbtnUser";
+            this.rbtnUser.Size = new System.Drawing.Size(92, 29);
+            this.rbtnUser.TabIndex = 1;
+            this.rbtnUser.TabStop = true;
+            this.rbtnUser.Text = "User";
+            this.rbtnUser.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAdmin
+            // 
+            this.rbtnAdmin.AutoSize = true;
+            this.rbtnAdmin.Location = new System.Drawing.Point(29, 51);
+            this.rbtnAdmin.Name = "rbtnAdmin";
+            this.rbtnAdmin.Size = new System.Drawing.Size(108, 29);
+            this.rbtnAdmin.TabIndex = 0;
+            this.rbtnAdmin.TabStop = true;
+            this.rbtnAdmin.Text = "Admin";
+            this.rbtnAdmin.UseVisualStyleBackColor = true;
             // 
             // guna2Button2
             // 
@@ -144,39 +140,44 @@
             this.guna2Button2.Text = "SỬA QUYỀN TRUY CẬP";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // groupBox1
+            // guna2Button1
             // 
-            this.groupBox1.Controls.Add(this.rbtnUser);
-            this.groupBox1.Controls.Add(this.rbtnAdmin);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(900, 38);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(307, 178);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Quyền truy cập";
+            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.Location = new System.Drawing.Point(100, 89);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button1.TabIndex = 0;
+            this.guna2Button1.Text = "XÓA";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
-            // rbtnAdmin
+            // panel2
             // 
-            this.rbtnAdmin.AutoSize = true;
-            this.rbtnAdmin.Location = new System.Drawing.Point(29, 51);
-            this.rbtnAdmin.Name = "rbtnAdmin";
-            this.rbtnAdmin.Size = new System.Drawing.Size(108, 29);
-            this.rbtnAdmin.TabIndex = 0;
-            this.rbtnAdmin.TabStop = true;
-            this.rbtnAdmin.Text = "Admin";
-            this.rbtnAdmin.UseVisualStyleBackColor = true;
+            this.panel2.Controls.Add(this.dgvAccount);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 247);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1819, 891);
+            this.panel2.TabIndex = 1;
             // 
-            // rbtnUser
+            // dgvAccount
             // 
-            this.rbtnUser.AutoSize = true;
-            this.rbtnUser.Location = new System.Drawing.Point(29, 117);
-            this.rbtnUser.Name = "rbtnUser";
-            this.rbtnUser.Size = new System.Drawing.Size(92, 29);
-            this.rbtnUser.TabIndex = 1;
-            this.rbtnUser.TabStop = true;
-            this.rbtnUser.Text = "User";
-            this.rbtnUser.UseVisualStyleBackColor = true;
+            this.dgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAccount.BackgroundColor = System.Drawing.Color.White;
+            this.dgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAccount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvAccount.Location = new System.Drawing.Point(0, 0);
+            this.dgvAccount.Name = "dgvAccount";
+            this.dgvAccount.RowHeadersWidth = 82;
+            this.dgvAccount.RowTemplate.Height = 33;
+            this.dgvAccount.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvAccount.Size = new System.Drawing.Size(1819, 891);
+            this.dgvAccount.TabIndex = 0;
+            this.dgvAccount.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAccount_CellClick);
             // 
             // Account
             // 
@@ -193,13 +194,13 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Account_Load);
             this.panel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
-            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAccount)).EndInit();
             this.ResumeLayout(false);
 
         }

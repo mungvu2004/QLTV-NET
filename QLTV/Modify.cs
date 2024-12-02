@@ -824,5 +824,75 @@ namespace QLTV
             }
         }
 
+        //------------------------------------------------------------------
+
+        public DataTable GetDate(int year, int month)
+        {
+            DataTable dataTable = new DataTable(); 
+            using(SqlConnection connection = new SqlConnection(sql))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = @"
+                SELECT 
+                    CONVERT(DATE, BorrowDate) AS NgayMuon,
+                    SUM(Quantity) AS TongSoLuong
+                FROM BorrowBooks WHERE YEAR(BorrowDate) = @Year AND MONTH(BorrowDate) = @Month
+                GROUP BY CONVERT(DATE, BorrowDate)";
+                    using(SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@Year", year);
+                        cmd.Parameters.AddWithValue("@Month", month);
+                        using(SqlDataAdapter adapter = new SqlDataAdapter(cmd))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                        return dataTable;
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return new DataTable();
+                }
+            }
+        }
+
+        public DataTable GetMounth ()
+        {
+            DataTable dataTable = new DataTable();
+            using (SqlConnection connection = new SqlConnection(sql))
+            {
+                try
+                {
+                    connection.Open();
+                    string Query = @"
+                SELECT 
+                    FORMAT(BorrowDate, 'yyyy-MM') AS Thang,
+                    SUM(Quantity) AS TongSoLuong
+                FROM BorrowBooks
+                GROUP BY FORMAT(BorrowDate, 'yyyy-MM')
+                ORDER BY Thang;
+            ";
+                    using (SqlCommand command = new SqlCommand(Query, connection))
+                    {
+                        using (SqlDataAdapter adapter = new SqlDataAdapter(command))
+                        {
+                            adapter.Fill(dataTable);
+                        }
+                        return dataTable;
+                    }
+                }
+                catch (Exception ex) 
+                {
+                    Console.WriteLine(ex.Message);
+                    return new DataTable();
+                }
+            }
+
+        }
     }
 }
+

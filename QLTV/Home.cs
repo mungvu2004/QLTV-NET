@@ -44,6 +44,10 @@ namespace QLTV
             pictureBox5.Click += new EventHandler(panel8_Click);
             label4.Click += new EventHandler(panel8_Click);
             
+            panel9.Click += new EventHandler(panel9_Click);
+            pictureBox6.Click += new EventHandler(panel9_Click);
+            label5.Click += new EventHandler(panel9_Click);
+
         }
         
         
@@ -119,9 +123,15 @@ namespace QLTV
             borrow.Show();
         }
 
-        private void btnData_Paint(object sender, PaintEventArgs e)
-        {
+        
 
+        private void panel9_Click(object sender, EventArgs e)
+        {
+            Stast stast = new Stast();
+            stast.TopLevel = false;
+            stast.Dock = DockStyle.Fill;
+            btnData.Controls.Add(stast);
+            stast.Show();
         }
     }
 }

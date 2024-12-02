@@ -40,3 +40,4 @@ D:\Form\QLTV\QLTV\obj\Debug\QLTV.Student.resources
 D:\Form\QLTV\QLTV\obj\Debug\QLTV.Borrow.resources
 D:\Form\QLTV\QLTV\obj\Debug\QLTV.DetailBorrow.resources
 D:\Form\QLTV\QLTV\obj\Debug\QLTV.Detailbook.resources
+D:\Form\QLTV\QLTV\obj\Debug\QLTV.Stast.resources

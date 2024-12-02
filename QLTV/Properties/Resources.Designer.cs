@@ -73,6 +73,16 @@ namespace QLTV.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap bg_a8fd2af {
+            get {
+                object obj = ResourceManager.GetObject("bg.a8fd2af", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap borrow {
             get {
                 object obj = ResourceManager.GetObject("borrow", resourceCulture);
