@@ -27,7 +27,7 @@ namespace QLTV
                 try
                 {
                     connection.Open();
-                    string query = "SELECT UserID, PasswordHash, Role FROM Users WHERE Email = @Email";
+                    string query = "SELECT UserID, PasswordHash, Role, Email FROM Users WHERE Email = @Email";
                     using(SqlCommand cmd = new SqlCommand(query, connection))
                     {
                         cmd.Parameters.AddWithValue("@Email", email);
@@ -37,25 +37,34 @@ namespace QLTV
                             int UserID = reader.GetInt32(0);
                             string stored = reader.GetString(1);
                             string storedRode = reader.GetString(2);
-                            if(BCrypt.Net.BCrypt.Verify(password, stored))
+                            string storedEmail = reader.GetString(3);
+                            if (string.Equals(email, storedEmail, StringComparison.Ordinal))
                             {
-                                if(storedRode.Equals(role, StringComparison.OrdinalIgnoreCase))
+                                if (BCrypt.Net.BCrypt.Verify(password, stored))
                                 {
-                                    CurrentUserRole = storedRode;
-                                    exMessage = "Bạn đã đăng nhập thành công!";
-                                    UserIDs = UserID;
-                                    return true;
+                                    if (storedRode.Equals(role, StringComparison.OrdinalIgnoreCase))
+                                    {
+                                        CurrentUserRole = storedRode;
+                                        exMessage = "Bạn đã đăng nhập thành công!";
+                                        UserIDs = UserID;
+                                        return true;
+                                    }
+                                    else
+                                    {
+                                        exMessage = "Vai trò đăng nhập của bạn không đúng!";
+                                    }
+
                                 }
                                 else
                                 {
-                                    exMessage = "Vai trò đăng nhập của bạn không đúng!";
+                                    exMessage = "Mật khẩu không chính xác!";
+                                    return false;
                                 }
-                                
                             }
-                            else 
-                            { 
-                                exMessage = "Mật khẩu không chính xác!"; 
-                                return false; 
+                            else
+                            {
+                                exMessage = "Email không đúng!";
+                                return false;
                             }
                         }
                     }
@@ -635,7 +644,7 @@ namespace QLTV
         }
         
 
-        public void UpdateBorrow(string StudentID, int bookID, DateTime returnDate, int quantity)
+        public bool UpdateBorrow(string StudentID, int bookID, DateTime returnDate, int quantity, out string message)
         {
             using( SqlConnection connection = new SqlConnection(sql))
             {
@@ -650,13 +659,25 @@ namespace QLTV
                         
                         cmd.Parameters.AddWithValue("@Quantity", quantity);
                         cmd.Parameters.AddWithValue("@ReturnDate", returnDate);
-                        cmd.ExecuteNonQuery();
+                        int rowsAffected = cmd.ExecuteNonQuery();
+                        if (rowsAffected > 0)
+                        {
+                            message = "Mượn sách thành công.";
+                            return true;
+                        }
+                        else
+                        {
+                            message = "Mượn sách thất bại. Không có thay đổi nào được thực hiện.";
+                            return false;
+                        }
                     }
                     
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
+                    message = ex.Message;
+                    return false;
                 }
             }
         }
@@ -892,6 +913,108 @@ namespace QLTV
                 }
             }
 
+        }
+
+        public bool CheckDetail(int ID)
+        {
+            using (SqlConnection connection = new SqlConnection(sql))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "select count(*) from where BookID = @ID";
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@ID", ID);
+                        int Check = (int)cmd.ExecuteScalar();
+                        if (Check > 0)
+                        {
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return false;
+                }
+            }
+        
+        }
+        public bool AddDetail(int ID, string detail)
+        {
+            using (SqlConnection connection = new SqlConnection(sql))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "insert into BookDetails(BookID, Detail) values(@BookID, @Detail) ";
+                    using (SqlCommand cmd = new SqlCommand(query, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@BookID", ID);
+                        cmd.Parameters.AddWithValue("@Detail", detail);
+                        return cmd.ExecuteNonQuery() > 0;
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return false;
+                }
+            }
+        }
+        public bool AddCate(string tenTL, out string mess)
+        {
+            using(SqlConnection connection = new SqlConnection(sql))
+            {
+                try
+                {
+                    connection.Open();
+                    string check = "SELECT COUNT(1) FROM Categories WHERE CategoryName = @CategoryName";
+                    string insert = "INSERT INTO Categories (CategoryName) VALUES (@CategoryName)";
+                    using(SqlCommand cmd = new SqlCommand(check, connection))
+                    {
+                        cmd.Parameters.AddWithValue("@CategoryName", tenTL);
+                        int count = (int)cmd.ExecuteScalar();
+                        if(count > 0)
+                        {
+                            mess = "Đã có thể loại sách này !!!";
+                            return false;
+                        }
+                        else
+                        {
+                            using(SqlCommand command = new SqlCommand(insert, connection))
+                            {
+                                command.Parameters.AddWithValue("@CategoryName", tenTL);
+                                int rowsAffected = command.ExecuteNonQuery();
+
+                                if (rowsAffected > 0)
+                                {
+                                    mess = "Thể loại sách đã được thêm thành công.";
+                                    return true;
+                                }
+                                else
+                                {
+                                    mess = "Thêm thể loại sách không thành công.";
+                                    return false;
+                                }
+                            }
+                        }
+                        
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    mess = ex.Message;
+                    return false;
+                }
+            }
         }
     }
 }

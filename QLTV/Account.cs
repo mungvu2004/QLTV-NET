@@ -38,11 +38,16 @@ namespace QLTV
         private void Account_Load(object sender, EventArgs e)
         {
            LoadAccount();
+            dgvAccount.DataBindingComplete += (s, ev) =>
+            {
+                dgvAccount.ClearSelection();
+                dgvAccount.CurrentCell = null;
+            };
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            if (dgvAccount.Rows.Count > 0)
+            if (dgvAccount.SelectedRows.Count >= 0)
             {
                 DialogResult result = MessageBox.Show(
                     "Bạn có chắc chắn muốn xóa tài khoản này không!!!",

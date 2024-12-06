@@ -50,6 +50,22 @@ namespace QLTV
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Question);
             }
+            else if (!checkEmail(email))
+            {
+                MessageBox.Show(
+                    "Email không hợp lệ. Vui lòng kiểm tra lại!",
+                    "Cảnh báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
+            else if (!checkPass(password))
+            {
+                MessageBox.Show(
+                    "Mật khẩu phải ít nhất 8 ký tự, bao gồm chữ thường, chữ hoa, số và ký tự đặc biệt!",
+                    "Cảnh báo",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning);
+            }
             else if (password.CompareTo(comfim) != 0)
             {
                 MessageBox.Show(

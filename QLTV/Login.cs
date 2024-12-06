@@ -62,7 +62,7 @@ namespace QLTV
             {
 
                 MessageBox.Show(
-                error,
+                $"{error}",
                 "Thông báo",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Question);
@@ -74,7 +74,7 @@ namespace QLTV
             {
 
                 MessageBox.Show(
-                error,
+                $"Bạn đang gặp lỗi: {error}",
                 "Thông báo",
                 MessageBoxButtons.OK,
                 MessageBoxIcon.Question);

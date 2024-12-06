@@ -41,3 +41,5 @@ D:\Form\QLTV\QLTV\obj\Debug\QLTV.Borrow.resources
 D:\Form\QLTV\QLTV\obj\Debug\QLTV.DetailBorrow.resources
 D:\Form\QLTV\QLTV\obj\Debug\QLTV.Detailbook.resources
 D:\Form\QLTV\QLTV\obj\Debug\QLTV.Stast.resources
+D:\Form\QLTV\QLTV\obj\Debug\QLTV.AddDetail.resources
+D:\Form\QLTV\QLTV\obj\Debug\QLTV.AddCate.resources

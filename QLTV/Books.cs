@@ -28,11 +28,12 @@ namespace QLTV
 
             if (categories.Count > 0)
             {
-                cbCategrory.Items.Clear();
+                //cbCategrory.Items.Clear();
                 cbCategrory.DataSource = categories;
                 cbCategrory.DisplayMember = "CategoryName";
                 cbCategrory.ValueMember = "CategoryID";
-                cbCategrory.SelectedItem = 0;
+                cbCategrory.SelectedItem = -1;
+                cbCategrory.SelectedIndex = -1;
                 
             }
             else
@@ -46,7 +47,8 @@ namespace QLTV
             List<Book> books = modify.Books();
             if (books.Count > 0)
             {
-               dgvBooks.DataSource = books;
+               
+                dgvBooks.DataSource = books;
                dgvBooks.ClearSelection();
             }
             else
@@ -59,6 +61,13 @@ namespace QLTV
         {
             LoadComboBox();
             LoadDataGrid();
+            dateYear.MaxDate = DateTime.Now;
+            dgvBooks.DataBindingComplete += (s, ev) =>
+            {
+                dgvBooks.ClearSelection();
+                dgvBooks.CurrentCell = null;
+            };
+
         }
         private bool CheckQuantity(string quantity)
         {
@@ -71,6 +80,11 @@ namespace QLTV
             }
             return true;
         }
+        private bool IsNumber(string input)
+        {
+            if (int.TryParse(input, out _)) return true;
+            return false;
+        }
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             List<Book> books = modify.Books();
@@ -80,11 +94,7 @@ namespace QLTV
             string count = txtQuantity.Text.Trim();
             int quantity = 0;
             int cateID = 0;
-            if(cbCategrory.SelectedValue != null)
-            {
-                Console.WriteLine(cbCategrory.SelectedValue.ToString());
-                cateID = Convert.ToInt32(cbCategrory.SelectedValue);
-            }
+            
             if(string.IsNullOrWhiteSpace(count))
             {
                 quantity = 1;
@@ -96,40 +106,60 @@ namespace QLTV
                     "Thông báo",
                     MessageBoxButtons.OK, 
                     MessageBoxIcon.Information);
+                return;
             }
             else
             {
                 quantity = Convert.ToInt32(count);
             }
-            string notifi;
-            modify.AddBook(bookName, auther, nxb, quantity, cateID, out notifi);
-            if(notifi == null)
+            if(string.IsNullOrWhiteSpace(bookName) || string.IsNullOrWhiteSpace(auther))
             {
                 MessageBox.Show(
-                    "Đã thêm sách thành công!!!",
+                    "Bạn hãy nhập đầy đủ thông tin sách để thêm!!!", 
                     "Thông báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                
-                LoadDataGrid();
-                txtAuthor.Clear();
-                txtBookName.Clear();
-                txtQuantity.Clear();
+                    MessageBoxButtons.OK, 
+                    MessageBoxIcon.Stop);
+                return;
+            }
+            if (cbCategrory.SelectedValue != null)
+            {
+                Console.WriteLine(cbCategrory.SelectedValue.ToString());
+                cateID = Convert.ToInt32(cbCategrory.SelectedValue);
+                string notifi;
+                modify.AddBook(bookName, auther, nxb, quantity, cateID, out notifi);
+                if (notifi == null)
+                {
+                    MessageBox.Show(
+                        "Đã thêm sách thành công!!!",
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+
+                    LoadDataGrid();
+                    txtAuthor.Clear();
+                    txtBookName.Clear();
+                    txtQuantity.Clear();
+                }
+                else
+                {
+                    MessageBox.Show(
+                        "Lỗi" + notifi,
+                        "Thông báo",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show(
-                    "Lỗi" + notifi,
-                    "Thông báo",
-                    MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+                MessageBox.Show("Bạn hãy chọn thể loại sách để thêm", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
 
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            if(dgvBooks.Rows.Count > 0)
+            if(dgvBooks.SelectedRows.Count > 0)
             {
                 DialogResult result =  MessageBox.Show(
                     "Bạn có chắc chắn muốn xóa sách này không!!!",
@@ -140,7 +170,7 @@ namespace QLTV
                 {
                     List<int> bookIDsToDelete = new List<int>();
 
-                    foreach (DataGridViewRow row in dgvBooks.SelectedRows) // Chỉ lặp qua các hàng được chọn
+                    foreach (DataGridViewRow row in dgvBooks.SelectedRows.Cast<DataGridViewRow>().Reverse()) // Chỉ lặp qua các hàng được chọn
                     {
                         if (row.Cells["BookId"].Value != null) // Đảm bảo giá trị không null
                         {
@@ -327,29 +357,37 @@ namespace QLTV
         {
 
         }
-
+        int bookId = -1;
         private void btnCT_Click(object sender, EventArgs e)
         {
-            if(dgvBooks.CurrentRow != null)
+            if(dgvBooks.SelectedRows.Count > 0)
             {
-                DataGridViewRow row = dgvBooks.CurrentRow;
-                int bookId = int.Parse(row.Cells["BookID"].Value.ToString());
-
-                DataTable dt = modify.Detailbook(bookId);
-                if(dt != null)
+                if(dgvBooks.SelectedRows.Count > 1)
                 {
-                    Detailbook db = new Detailbook(bookId,dt);
-                    db.Show();
+                    MessageBox.Show("Bạn chỉ có thể chọn 1 hàng để xem !!! ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                    return;
                 }
                 else
                 {
-                    MessageBox.Show("Khong co thong tin ", "loi", MessageBoxButtons.OK);
-                    return;
+                    DataGridViewRow row = dgvBooks.CurrentRow;
+                    bookId = int.Parse(row.Cells["BookID"].Value.ToString());
+
+                    DataTable dt = modify.Detailbook(bookId);
+                    if (dt != null)
+                    {
+                        Detailbook db = new Detailbook(bookId, dt);
+                        db.Show();
+                    }
+                    else
+                    {
+                        MessageBox.Show(" ", "loi", MessageBoxButtons.OK);
+                        return;
+                    }
                 }
             }
             else
             {
-                MessageBox.Show("Vui long chon sach ","Thong bao",MessageBoxButtons.OK); return;
+                MessageBox.Show("Vui lòng chọn sách đê xem !!! ","Thông báo",MessageBoxButtons.OK, MessageBoxIcon.Stop); return;
             }
         }
 
@@ -359,6 +397,25 @@ namespace QLTV
             txtAuthor.Text = string.Empty;
             txtBookName.Text = string.Empty;
             txtQuantity.Text = string.Empty;
+        }
+
+      
+
+        private void btnDetail_Click(object sender, EventArgs e)
+        {
+            AddDetail addDetail = new AddDetail();
+            addDetail.Show();
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+            AddCate addCate = new AddCate();
+            addCate.Show();
+        }
+
+        private void cbCategrory_DropDown(object sender, EventArgs e)
+        {
+            LoadComboBox();
         }
     }
 }

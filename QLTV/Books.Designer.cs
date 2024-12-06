@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Books));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnDetail = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
             this.btnCT = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
@@ -47,21 +48,24 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label6 = new System.Windows.Forms.Label();
             this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.dgvBooks = new System.Windows.Forms.DataGridView();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.guna2Button6);
+            this.panel1.Controls.Add(this.btnDetail);
             this.panel1.Controls.Add(this.guna2Button5);
             this.panel1.Controls.Add(this.btnCT);
             this.panel1.Controls.Add(this.guna2Button4);
@@ -81,8 +85,23 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(600, 1123);
+            this.panel1.Size = new System.Drawing.Size(594, 1123);
             this.panel1.TabIndex = 0;
+            // 
+            // btnDetail
+            // 
+            this.btnDetail.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetail.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnDetail.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnDetail.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnDetail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDetail.ForeColor = System.Drawing.Color.White;
+            this.btnDetail.Location = new System.Drawing.Point(331, 702);
+            this.btnDetail.Name = "btnDetail";
+            this.btnDetail.Size = new System.Drawing.Size(180, 45);
+            this.btnDetail.TabIndex = 18;
+            this.btnDetail.Text = "MÔ TẢ SÁCH";
+            this.btnDetail.Click += new System.EventHandler(this.btnDetail_Click);
             // 
             // guna2Button5
             // 
@@ -92,7 +111,7 @@
             this.guna2Button5.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button5.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.Location = new System.Drawing.Point(331, 956);
+            this.guna2Button5.Location = new System.Drawing.Point(331, 918);
             this.guna2Button5.Name = "guna2Button5";
             this.guna2Button5.Size = new System.Drawing.Size(180, 45);
             this.guna2Button5.TabIndex = 17;
@@ -107,7 +126,7 @@
             this.btnCT.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.btnCT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnCT.ForeColor = System.Drawing.Color.White;
-            this.btnCT.Location = new System.Drawing.Point(331, 862);
+            this.btnCT.Location = new System.Drawing.Point(331, 811);
             this.btnCT.Name = "btnCT";
             this.btnCT.Size = new System.Drawing.Size(180, 45);
             this.btnCT.TabIndex = 16;
@@ -122,11 +141,11 @@
             this.guna2Button4.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button4.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.Location = new System.Drawing.Point(273, 739);
+            this.guna2Button4.Location = new System.Drawing.Point(42, 1022);
             this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.Size = new System.Drawing.Size(268, 45);
+            this.guna2Button4.Size = new System.Drawing.Size(180, 45);
             this.guna2Button4.TabIndex = 14;
-            this.guna2Button4.Text = "THÊM NHIỀU SÁCH";
+            this.guna2Button4.Text = "EXCEL";
             this.guna2Button4.Click += new System.EventHandler(this.guna2Button4_Click);
             // 
             // guna2Button3
@@ -137,7 +156,7 @@
             this.guna2Button3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button3.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.Location = new System.Drawing.Point(42, 862);
+            this.guna2Button3.Location = new System.Drawing.Point(42, 811);
             this.guna2Button3.Name = "guna2Button3";
             this.guna2Button3.Size = new System.Drawing.Size(180, 45);
             this.guna2Button3.TabIndex = 13;
@@ -152,7 +171,7 @@
             this.guna2Button2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.Location = new System.Drawing.Point(42, 957);
+            this.guna2Button2.Location = new System.Drawing.Point(42, 918);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.Size = new System.Drawing.Size(180, 45);
             this.guna2Button2.TabIndex = 12;
@@ -167,7 +186,7 @@
             this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(42, 740);
+            this.guna2Button1.Location = new System.Drawing.Point(42, 702);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.Size = new System.Drawing.Size(180, 45);
             this.guna2Button1.TabIndex = 11;
@@ -179,7 +198,9 @@
             this.dateYear.CustomFormat = "yyyy";
             this.dateYear.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateYear.Location = new System.Drawing.Point(285, 508);
+            this.dateYear.MinDate = new System.DateTime(1850, 1, 1, 0, 0, 0, 0);
             this.dateYear.Name = "dateYear";
+            this.dateYear.ShowUpDown = true;
             this.dateYear.Size = new System.Drawing.Size(256, 31);
             this.dateYear.TabIndex = 10;
             this.dateYear.Value = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
@@ -187,7 +208,7 @@
             // cbCategrory
             // 
             this.cbCategrory.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.cbCategrory.DropDownHeight = 50;
+            this.cbCategrory.DropDownHeight = 75;
             this.cbCategrory.FormattingEnabled = true;
             this.cbCategrory.IntegralHeight = false;
             this.cbCategrory.ItemHeight = 25;
@@ -195,6 +216,7 @@
             this.cbCategrory.Name = "cbCategrory";
             this.cbCategrory.Size = new System.Drawing.Size(506, 33);
             this.cbCategrory.TabIndex = 9;
+            this.cbCategrory.DropDown += new System.EventHandler(this.cbCategrory_DropDown);
             // 
             // txtQuantity
             // 
@@ -315,27 +337,16 @@
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.txtSearch);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(600, 0);
+            this.panel2.Location = new System.Drawing.Point(594, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1195, 200);
+            this.panel2.Size = new System.Drawing.Size(1201, 200);
             this.panel2.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(399, 200);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // label6
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(469, 78);
+            this.label6.Location = new System.Drawing.Point(475, 78);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 68);
             this.label6.TabIndex = 1;
@@ -354,7 +365,7 @@
             this.txtSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtSearch.Location = new System.Drawing.Point(654, 78);
+            this.txtSearch.Location = new System.Drawing.Point(660, 78);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
@@ -369,9 +380,9 @@
             this.panel3.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel3.Controls.Add(this.dgvBooks);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(600, 200);
+            this.panel3.Location = new System.Drawing.Point(594, 200);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1195, 923);
+            this.panel3.Size = new System.Drawing.Size(1201, 923);
             this.panel3.TabIndex = 2;
             // 
             // dgvBooks
@@ -386,10 +397,36 @@
             this.dgvBooks.RowHeadersWidth = 82;
             this.dgvBooks.RowTemplate.Height = 33;
             this.dgvBooks.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBooks.Size = new System.Drawing.Size(1195, 923);
+            this.dgvBooks.Size = new System.Drawing.Size(1201, 923);
             this.dgvBooks.TabIndex = 0;
             this.dgvBooks.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellClick);
             this.dgvBooks.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvBooks_CellContentClick);
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.guna2Button6.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.guna2Button6.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.guna2Button6.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2Button6.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.Location = new System.Drawing.Point(331, 1022);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.Size = new System.Drawing.Size(180, 45);
+            this.guna2Button6.TabIndex = 19;
+            this.guna2Button6.Text = "THỂ LOẠI";
+            this.guna2Button6.Click += new System.EventHandler(this.guna2Button6_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(399, 200);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // Books
             // 
@@ -409,9 +446,9 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBooks)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -441,5 +478,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Button btnCT;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
+        private Guna.UI2.WinForms.Guna2Button btnDetail;
+        private Guna.UI2.WinForms.Guna2Button guna2Button6;
     }
 }

@@ -31,10 +31,10 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.lbnamebook = new System.Windows.Forms.Label();
-            this.lbtg = new System.Windows.Forms.Label();
-            this.lbttct = new System.Windows.Forms.Label();
             this.dgvdetail = new System.Windows.Forms.DataGridView();
+            this.lbttct = new System.Windows.Forms.Label();
+            this.lbtg = new System.Windows.Forms.Label();
+            this.lbnamebook = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvdetail)).BeginInit();
@@ -73,33 +73,6 @@
             this.panel2.Size = new System.Drawing.Size(1025, 491);
             this.panel2.TabIndex = 1;
             // 
-            // lbnamebook
-            // 
-            this.lbnamebook.AutoSize = true;
-            this.lbnamebook.Location = new System.Drawing.Point(127, 49);
-            this.lbnamebook.Name = "lbnamebook";
-            this.lbnamebook.Size = new System.Drawing.Size(119, 25);
-            this.lbnamebook.TabIndex = 0;
-            this.lbnamebook.Text = "Tên sách : ";
-            // 
-            // lbtg
-            // 
-            this.lbtg.AutoSize = true;
-            this.lbtg.Location = new System.Drawing.Point(127, 126);
-            this.lbtg.Name = "lbtg";
-            this.lbtg.Size = new System.Drawing.Size(101, 25);
-            this.lbtg.TabIndex = 1;
-            this.lbtg.Text = "Tác giả : ";
-            // 
-            // lbttct
-            // 
-            this.lbttct.AutoSize = true;
-            this.lbttct.Location = new System.Drawing.Point(127, 204);
-            this.lbttct.Name = "lbttct";
-            this.lbttct.Size = new System.Drawing.Size(189, 25);
-            this.lbttct.TabIndex = 2;
-            this.lbttct.Text = "Thông tin chi tiết : ";
-            // 
             // dgvdetail
             // 
             this.dgvdetail.AllowUserToAddRows = false;
@@ -116,6 +89,32 @@
             this.dgvdetail.Size = new System.Drawing.Size(1025, 171);
             this.dgvdetail.TabIndex = 3;
             this.dgvdetail.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvdetail_CellContentClick);
+            // 
+            // lbttct
+            // 
+            this.lbttct.Location = new System.Drawing.Point(127, 184);
+            this.lbttct.Name = "lbttct";
+            this.lbttct.Size = new System.Drawing.Size(783, 112);
+            this.lbttct.TabIndex = 2;
+            this.lbttct.Text = "Thông tin chi tiết : ";
+            // 
+            // lbtg
+            // 
+            this.lbtg.AutoSize = true;
+            this.lbtg.Location = new System.Drawing.Point(127, 126);
+            this.lbtg.Name = "lbtg";
+            this.lbtg.Size = new System.Drawing.Size(101, 25);
+            this.lbtg.TabIndex = 1;
+            this.lbtg.Text = "Tác giả : ";
+            // 
+            // lbnamebook
+            // 
+            this.lbnamebook.AutoSize = true;
+            this.lbnamebook.Location = new System.Drawing.Point(127, 49);
+            this.lbnamebook.Name = "lbnamebook";
+            this.lbnamebook.Size = new System.Drawing.Size(119, 25);
+            this.lbnamebook.TabIndex = 0;
+            this.lbnamebook.Text = "Tên sách : ";
             // 
             // Detailbook
             // 

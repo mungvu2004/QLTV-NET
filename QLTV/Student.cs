@@ -39,6 +39,11 @@ namespace QLTV
         private void Student_Load(object sender, EventArgs e)
         {
             LoadStudent();
+            dgvStudents.DataBindingComplete += (s, ev) =>
+            {
+                dgvStudents.ClearSelection();
+                dgvStudents.CurrentCell = null;
+            };
         }
 
         private bool checkId(string studentID)

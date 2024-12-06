@@ -32,6 +32,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.rbtnUser = new System.Windows.Forms.RadioButton();
+            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
             this.btnResign = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogin = new Guna.UI2.WinForms.Guna2Button();
             this.txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -39,8 +41,6 @@
             this.txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.rbtnAdmin = new System.Windows.Forms.RadioButton();
-            this.rbtnUser = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -82,6 +82,30 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(478, 528);
             this.panel2.TabIndex = 1;
+            // 
+            // rbtnUser
+            // 
+            this.rbtnUser.AutoSize = true;
+            this.rbtnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnUser.Location = new System.Drawing.Point(298, 382);
+            this.rbtnUser.Name = "rbtnUser";
+            this.rbtnUser.Size = new System.Drawing.Size(120, 29);
+            this.rbtnUser.TabIndex = 8;
+            this.rbtnUser.Text = "USERS";
+            this.rbtnUser.UseVisualStyleBackColor = true;
+            // 
+            // rbtnAdmin
+            // 
+            this.rbtnAdmin.AutoSize = true;
+            this.rbtnAdmin.Checked = true;
+            this.rbtnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbtnAdmin.Location = new System.Drawing.Point(72, 382);
+            this.rbtnAdmin.Name = "rbtnAdmin";
+            this.rbtnAdmin.Size = new System.Drawing.Size(115, 29);
+            this.rbtnAdmin.TabIndex = 7;
+            this.rbtnAdmin.TabStop = true;
+            this.rbtnAdmin.Text = "ADMIN";
+            this.rbtnAdmin.UseVisualStyleBackColor = true;
             // 
             // btnResign
             // 
@@ -183,30 +207,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // rbtnAdmin
-            // 
-            this.rbtnAdmin.AutoSize = true;
-            this.rbtnAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnAdmin.Location = new System.Drawing.Point(72, 382);
-            this.rbtnAdmin.Name = "rbtnAdmin";
-            this.rbtnAdmin.Size = new System.Drawing.Size(115, 29);
-            this.rbtnAdmin.TabIndex = 7;
-            this.rbtnAdmin.Text = "ADMIN";
-            this.rbtnAdmin.UseVisualStyleBackColor = true;
-            // 
-            // rbtnUser
-            // 
-            this.rbtnUser.AutoSize = true;
-            this.rbtnUser.Checked = true;
-            this.rbtnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbtnUser.Location = new System.Drawing.Point(298, 382);
-            this.rbtnUser.Name = "rbtnUser";
-            this.rbtnUser.Size = new System.Drawing.Size(120, 29);
-            this.rbtnUser.TabIndex = 8;
-            this.rbtnUser.TabStop = true;
-            this.rbtnUser.Text = "USERS";
-            this.rbtnUser.UseVisualStyleBackColor = true;
             // 
             // Login
             // 
